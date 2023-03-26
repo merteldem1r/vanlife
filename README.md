@@ -5,7 +5,7 @@ https://merteldem1r-vanlife.netlify.app/
 
 Features: 
 * React Router
-* Relative paths
+* Relative Paths
 * Search Parameters
 * Components & Pages
 * API
