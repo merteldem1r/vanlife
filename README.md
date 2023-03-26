@@ -11,6 +11,7 @@ Features:
 * API
 * Hooks & Custom Hooks
 * Error Handling
+* Tailwind CSS
 
 # App Preview
 
