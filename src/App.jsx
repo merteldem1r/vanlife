@@ -19,7 +19,7 @@ import HostVanPricing from "./pages/Host/Vans/HostVanPricing";
 import HostVans from "./pages/Host/Vans/HostVans";
 import NotFound from "./pages/NotFound";
 import VanPage from "./pages/Vans/VanPage";
-import Vans, { loader as vansLoader } from "./pages/Vans/Vans";
+import Vans from "./pages/Vans/Vans";
 import "./server";
 
 const router = createBrowserRouter(
@@ -27,7 +27,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
-      <Route path="vans" element={<Vans />} loader={vansLoader} />
+      <Route path="vans" element={<Vans />} />
       <Route path="vans/:id" element={<VanPage />} />
 
       <Route path="host" element={<HostLayout />}>

@@ -10,22 +10,19 @@ export function loader() {
 }
 
 const Vans = () => {
-  // const [vans, setVans] = useState([]);
-  // const [fetching, isLoading, error] = useFetching(async () => {
-  //   const data = await VansService.getAllVans();
-  //   setVans(data);
-  // });
-  const [isLoading, setIsLoading] = useState();
-  const error = null;
-  const vans = useLoaderData();
+  const [vans, setVans] = useState([]);
+  const [fetching, isLoading, error] = useFetching(async () => {
+    const data = await VansService.getAllVans();
+    setVans(data);
+  });
   const [searchParams, setSearchParams] = useSearchParams();
 
   const typeFilter = searchParams.get("type");
 
   // get and set all vans
-  // useEffect(() => {
-  //   fetching();
-  // }, []);
+  useEffect(() => {
+    fetching();
+  }, []);
 
   // filtered vans elements
   const filteredVanElements = typeFilter
@@ -80,12 +77,12 @@ const Vans = () => {
   return (
     <section className="my-[9vh] flex flex-col items-center">
       {isLoading ? (
-        <Loader />
+        <Loader/>
       ) : (
         <div className="sm:min-w-[650px] md:min-w-[700px] max-w-[825px] mt-8 p-3">
           {error ? (
             // Error handling
-            <Error error={error} />
+            <Error error={error}/>
           ) : (
             <>
               {/* Main Content */}
