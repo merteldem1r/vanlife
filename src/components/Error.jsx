@@ -3,7 +3,7 @@ import React from "react";
 const Error = ({ error }) => {
   return (
     <div className="flex flex-col items-center gap-3">
-      <img src="img/error.jpg" className="w-[85px] mix-blend-darken" alt="" />
+      <img src="img/error.jpg" className="w-[70px] mix-blend-darken" alt="" />
       <h1 className="text-[20px] font-semibold">
         There was an unexpected error
       </h1>

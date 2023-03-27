@@ -1,26 +1,31 @@
 import React, { useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams, useLoaderData } from "react-router-dom";
 import VansService from "../../API/vansService";
 import Error from "../../components/Error";
 import Loader from "../../components/UI/Loader/Loader";
 import { useFetching } from "../../hooks/useFetching";
 
+export function loader() {
+  return VansService.getAllVans();
+}
+
 const Vans = () => {
-  const [vans, setVans] = useState([]);
-  const [fetching, isLoading, error] = useFetching(async () => {
-    const data = await VansService.getAllVans();
-    setVans(data);
-  });
+  // const [vans, setVans] = useState([]);
+  // const [fetching, isLoading, error] = useFetching(async () => {
+  //   const data = await VansService.getAllVans();
+  //   setVans(data);
+  // });
+  const [isLoading, setIsLoading] = useState();
+  const error = null;
+  const vans = useLoaderData();
   const [searchParams, setSearchParams] = useSearchParams();
 
   const typeFilter = searchParams.get("type");
 
   // get and set all vans
-  useEffect(() => {
-    fetching();
-  }, []);
-
-  console.log(error);
+  // useEffect(() => {
+  //   fetching();
+  // }, []);
 
   // filtered vans elements
   const filteredVanElements = typeFilter
