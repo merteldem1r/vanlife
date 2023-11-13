@@ -1,5 +1,5 @@
 # VANLIFE React App
-Vanlife is a react project which I made with Tailwind CSS and used react, react router features. I got figma design file from Bob Ziroll on scrimba platform.
+Figma file from Bob Ziroll on scrimba platform.
 
 https://merteldem1r-vanlife.netlify.app/
 
